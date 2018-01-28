@@ -1,0 +1,22 @@
+1.cnpm install -g vue-cli全局安装（如果安装过了，下次就不用安了可直接从步骤2开始）
+2.vue init webpack-simple myvuemint
+3.cd myvuemint
+4.cnpm install
+5.npm run dev
+安装mint-ui
+6.cnpm install --save-dev mint-ui
+7.在main.js中引入
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+//并使用mint-ui
+Vue.use(MintUI)参照 http://mint-ui.github.io/docs/#/zh-cn2/quickstart
+关于头部列表等的引入如果写在一个页面里再不用引入如果是单页面的vue页面则需要在main.js中单独引入如
+
+import head from './head.vue'
+Vue.component(Head.name, Head);
+
+<mt-cell v-for="user in item.users" @clik.native="telalert" :title="user.name" :key="user.id"></mt-cell> 
+原生的方法要加.native
+v-for索引中最好给一个key进行唯一的标识，否则控制台会有警告
+
+
